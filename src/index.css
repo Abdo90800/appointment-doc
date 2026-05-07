@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* RTL logical properties support */
+.start-6 { inset-inline-start: 1.5rem; }
+.end-6 { inset-inline-end: 1.5rem; }
+.start-4 { inset-inline-start: 1rem; }
+.end-4 { inset-inline-end: 1rem; }
+.start-3 { inset-inline-start: 0.75rem; }
+.end-3 { inset-inline-end: 0.75rem; }
+
+/* Custom scrollbar for date picker */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 2px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* RTL text alignment */
+[dir="rtl"] .text-start {
+  text-align: right;
+}
+[dir="ltr"] .text-start {
+  text-align: left;
+}
+
+/* Logical properties for margin/padding in RTL */
+[dir="rtl"] .me-1 { margin-left: 0.25rem; margin-right: 0; }
+[dir="ltr"] .me-1 { margin-right: 0.25rem; margin-left: 0; }
+[dir="rtl"] .me-2 { margin-left: 0.5rem; margin-right: 0; }
+[dir="ltr"] .me-2 { margin-right: 0.5rem; margin-left: 0; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb, #0d9488);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Selection color */
+::selection {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
